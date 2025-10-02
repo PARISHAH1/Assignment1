@@ -1,0 +1,6 @@
+C:\Exercise1\DesignPatterns\behavioral\observer\ObserverDemo.java
+C:\Exercise1\DesignPatterns\behavioral\strategy\StrategyDemo.java
+C:\Exercise1\DesignPatterns\creational\factory\FactoryDemo.java
+C:\Exercise1\DesignPatterns\creational\singleton\SingletonDemo.java
+C:\Exercise1\DesignPatterns\structural\adapter\AdapterDemo.java
+C:\Exercise1\DesignPatterns\structural\decorator\DecoratorDemo.java
