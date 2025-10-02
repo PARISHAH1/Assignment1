@@ -108,7 +108,7 @@ Notes:
 - Start typing commands after you see: `SmartOffice app booting...`.
 - If you modify code, re-run the compile step before running again.
 
-## Project Highlights (Why this is selection-ready)
+## Project Highlights 
 
 - Clear mapping between patterns and code: each pattern has a minimal, runnable demo under `DesignPatterns/...`.
 - End-to-end scenario: SmartOffice shows patterns collaborating (Singleton + Command + Observer) to model real operations.
@@ -160,11 +160,6 @@ java DesignPatterns.creational.singleton.SingletonDemo
 java DesignPatterns.creational.factory.FactoryDemo
 java SmartOffice.Main
 ```
-## Future Enhancements
-
-- Add persistence and repositories for bookings/rooms.
-- Introduce a REST layer (Spring Boot) to expose SmartOffice commands via HTTP.
-- Add automated tests (JUnit) and CI workflow.
 
 ## Author
 
