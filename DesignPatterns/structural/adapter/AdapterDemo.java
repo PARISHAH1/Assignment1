@@ -1,5 +1,3 @@
-package DesignPatterns.structural.adapter;
-
 // Demo
 public class AdapterDemo {
     public static void main(final String[] args) {

@@ -1,5 +1,3 @@
-package DesignPatterns.structural.decorator;
-
 public class SugarDecorator extends CoffeeDecorator {
     private static final String DESC_SUFFIX = ", Sugar";
     private static final double COST_INCREMENT = 10.0;

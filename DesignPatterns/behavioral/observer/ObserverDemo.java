@@ -1,5 +1,3 @@
-package DesignPatterns.behavioral.observer;
-
 // Observer Pattern - Minimal Demo
 interface Observer {
     void update(String message);

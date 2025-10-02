@@ -1,5 +1,3 @@
-package DesignPatterns.structural.decorator;
-
 public class MilkDecorator extends CoffeeDecorator {
     private static final String DESC_SUFFIX = ", Milk";
     private static final double COST_INCREMENT = 20.0;

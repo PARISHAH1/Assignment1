@@ -68,7 +68,6 @@ If your IDE shows a “package does not match expected package” warning, set t
 - Factory
   ```
   Serving Coffee
-  Serving Tea
   ```
 
 ## Quick test ideas
@@ -79,4 +78,47 @@ If your IDE shows a “package does not match expected package” warning, set t
 - Strategy: switch strategies and vary inputs (negatives, zeros).
 - Factory: pass different types; invalid type throws `IllegalArgumentException`.
 
+<<<<<<< HEAD
 
+=======
+## Exercise 2 – SmartOffice (CLI)
+
+Folder: `Exercise2/SmartOffice/`
+
+This is a simple Smart Office console app demonstrating additional patterns:
+
+- Singleton: `SmartOffice.core.OfficeConfig`
+- Command: `SmartOffice.command.*` with `CommandInvoker`
+- Observer: `SmartOffice.observer.*` reacting to occupancy and bookings
+
+### How to compile and run
+
+From the project root `c:\Exercise1` (re-uses the same compile step as Exercise 1):
+
+```
+dir /s /b *.java > sources.txt
+javac -d . @sources.txt
+```
+
+Run the SmartOffice app:
+
+```
+java SmartOffice.Main
+```
+
+### Supported commands (examples)
+
+```
+config room count 3
+config room max capacity 1 6     # set room 1 capacity to 6
+block room 2 10:00 60            # book room 2 at 10:00 for 60 minutes
+add room 2 3                     # add 3 occupants to room 2
+cancel room 2                    # cancel booking for room 2
+exit                             # quit the app
+```
+
+Notes:
+
+- Start typing commands after you see: `SmartOffice app booting...`
+- If you modify code, re-run the compile step before running again.
+>>>>>>> 202e7ca (Add Exercise 2 (SmartOffice) and update README to include Exercises 1 & 2 with run instructions)

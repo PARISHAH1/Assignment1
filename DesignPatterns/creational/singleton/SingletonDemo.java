@@ -1,5 +1,3 @@
-package DesignPatterns.creational.singleton;
-
 // Singleton Pattern - Minimal Demo
 final class Singleton {
     private static final Singleton INSTANCE = new Singleton();

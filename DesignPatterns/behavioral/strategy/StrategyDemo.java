@@ -1,5 +1,3 @@
-package DesignPatterns.behavioral.strategy;
-
 // Strategy Pattern - Minimal Demo
 interface Strategy {
     int execute(int a, int b);
