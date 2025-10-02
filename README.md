@@ -62,14 +62,6 @@ If your IDE shows a “package does not match expected package” warning, set t
   Multiply: 12
   ```
 - Singleton
-  ```
-  Hello from Singleton, same instance: true
-  ```
-- Factory
-  ```
-  Serving Coffee
-  ```
-
 ## Quick test ideas
 
 - Adapter: try different filenames or blank string to see validation.
@@ -78,35 +70,30 @@ If your IDE shows a “package does not match expected package” warning, set t
 - Strategy: switch strategies and vary inputs (negatives, zeros).
 - Factory: pass different types; invalid type throws `IllegalArgumentException`.
 
-<<<<<<< HEAD
-
-=======
 ## Exercise 2 – SmartOffice (CLI)
 
 Folder: `Exercise2/SmartOffice/`
 
-This is a simple Smart Office console app demonstrating additional patterns:
+SmartOffice is a small, interview-ready console application that showcases clean application of multiple design patterns working together in a realistic scenario.
 
-- Singleton: `SmartOffice.core.OfficeConfig`
-- Command: `SmartOffice.command.*` with `CommandInvoker`
-- Observer: `SmartOffice.observer.*` reacting to occupancy and bookings
+- Singleton: `SmartOffice.core.OfficeConfig` provides a single configuration/state for rooms and bookings.
+- Command: `SmartOffice.command.*` encapsulates user actions (book, cancel, add occupants) and decouples invoker from receivers.
+- Observer: `SmartOffice.observer.*` (e.g., `LightSystem`, `ACSystem`) reacts to occupancy changes and bookings.
 
-### How to compile and run
+## How to compile and run (same as Exercise 1)
 
-From the project root `c:\Exercise1` (re-uses the same compile step as Exercise 1):
+From the project root `c:\Exercise1`:
 
 ```
 dir /s /b *.java > sources.txt
 javac -d . @sources.txt
 ```
-
 Run the SmartOffice app:
 
 ```
 java SmartOffice.Main
 ```
-
-### Supported commands (examples)
+### Example session
 
 ```
 config room count 3
@@ -116,9 +103,69 @@ add room 2 3                     # add 3 occupants to room 2
 cancel room 2                    # cancel booking for room 2
 exit                             # quit the app
 ```
-
 Notes:
 
-- Start typing commands after you see: `SmartOffice app booting...`
+- Start typing commands after you see: `SmartOffice app booting...`.
 - If you modify code, re-run the compile step before running again.
->>>>>>> 202e7ca (Add Exercise 2 (SmartOffice) and update README to include Exercises 1 & 2 with run instructions)
+
+## Project Highlights (Why this is selection-ready)
+
+- Clear mapping between patterns and code: each pattern has a minimal, runnable demo under `DesignPatterns/...`.
+- End-to-end scenario: SmartOffice shows patterns collaborating (Singleton + Command + Observer) to model real operations.
+- Simple tooling: vanilla `javac/java`, no framework lock-in, runs on any Windows machine.
+- Readable code: small classes, self-descriptive names, and intentional separation of concerns.
+
+## Directory Structure (key paths)
+
+```
+c:\Exercise1
+├─ DesignPatterns
+│  ├─ behavioral
+│  │  ├─ observer\ObserverDemo.java
+│  │  └─ strategy\StrategyDemo.java
+│  ├─ creational
+│  │  ├─ singleton\SingletonDemo.java
+│  │  └─ factory\FactoryDemo.java
+│  └─ structural
+│     ├─ adapter\AdapterDemo.java
+│     └─ decorator\DecoratorDemo.java
+└─ Exercise2
+   └─ SmartOffice
+      ├─ Main.java
+      ├─ core\(OfficeConfig, Room, Booking)
+      ├─ command\(Command, AddOccupantCommand, BookRoomCommand, CancelRoomCommand, CommandInvoker)
+      └─ observer\(Observer, OccupancySensor, LightSystem, ACSystem)
+```
+## Design Choices & Tradeoffs
+
+- Commands are immutable and validate input early; this keeps the invoker simple.
+- `OfficeConfig` centralizes state to simplify the demo; in larger systems, consider repositories/services per aggregate.
+- Observer chain uses simple interfaces to keep coupling low; swapping concrete observers is straightforward.
+
+## Requirements
+
+- Java 8+ (tested on Windows).
+- Terminal access (cmd.exe or Git Bash/PowerShell).
+
+## Running Any Demo Quickly
+
+After compiling, run one of:
+
+```
+java DesignPatterns.structural.adapter.AdapterDemo
+java DesignPatterns.structural.decorator.DecoratorDemo
+java DesignPatterns.behavioral.observer.ObserverDemo
+java DesignPatterns.behavioral.strategy.StrategyDemo
+java DesignPatterns.creational.singleton.SingletonDemo
+java DesignPatterns.creational.factory.FactoryDemo
+java SmartOffice.Main
+```
+## Future Enhancements
+
+- Add persistence and repositories for bookings/rooms.
+- Introduce a REST layer (Spring Boot) to expose SmartOffice commands via HTTP.
+- Add automated tests (JUnit) and CI workflow.
+
+## Author
+
+- Pari Shah — Building clean, demonstrable Java solutions with a focus on patterns and readability.
