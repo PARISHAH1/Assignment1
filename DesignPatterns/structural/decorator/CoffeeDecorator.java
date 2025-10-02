@@ -1,3 +1,5 @@
+package DesignPatterns.structural.decorator;
+
 public abstract class CoffeeDecorator implements Coffee {
     protected final Coffee coffee;
 

@@ -1,3 +1,5 @@
+package DesignPatterns.structural.decorator;
+
 // Demo
 public class DecoratorDemo {
     public static void main(final String[] args) {

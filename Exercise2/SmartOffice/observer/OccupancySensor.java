@@ -1,4 +1,4 @@
-package observer;
+package SmartOffice.observer;
 
 import java.util.*;
 
