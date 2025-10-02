@@ -79,9 +79,4 @@ If your IDE shows a “package does not match expected package” warning, set t
 - Strategy: switch strategies and vary inputs (negatives, zeros).
 - Factory: pass different types; invalid type throws `IllegalArgumentException`.
 
-## Notes
 
-- Code is kept intentionally simple and unique per the exercise instructions.
-- No frameworks/tools are required beyond JDK.
-# Assignment
-# Assignment1
